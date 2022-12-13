@@ -1,6 +1,6 @@
 {
   "name": "ce-core",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "ce core",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,16 @@
     "type": "git",
     "url": "git://github.com/impohcom/ce-core.git"
   },
-  "homepage": "https://github.com/impohcom/ce-core"
+  "homepage": "https://github.com/impohcom/ce-core",
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "packages/*/{src,types}/**/*.ts": [
+      "eslint --cache --fix"
+    ],
+    "packages/**/*.d.ts": [
+      "eslint --cache --fix"
+    ]
+  }
 }

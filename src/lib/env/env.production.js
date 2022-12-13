@@ -9,11 +9,10 @@ class ProductionConfig {
   constructor () {
     let { execPath, env, argv, cwd } = process
 
-    log.verbose('CE_APP_DIR', env.CE_APP_DIR)
     this.options = {
-      CE_ENV: 'production',
-      APP_HOME_DIR: env.CE_APP_DIR
+      CE_ENV: 'production'
     }
+    if (env.CE_APP_DIR) this.options.APP_HOME_DIR = env.CE_APP_DIR
   }
 
   /* 获取配置 */

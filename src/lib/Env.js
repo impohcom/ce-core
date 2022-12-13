@@ -17,7 +17,7 @@ const getConfig = (appEnv) => {
     }
 
     /* 小程序生产模式 */
-    if (type.indexOf('-launch_appid=') || appEnv === 'production') {
+    if (type.indexOf('-launch_appid=') !== -1 || appEnv === 'production') {
       productionConfig = new ProductionConfig().getOptions()
     }
   }

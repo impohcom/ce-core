@@ -3,13 +3,18 @@ const is = require("electron-is")
 const DefaultConfig = require('./env/env.default')
 const DevelopmentConfig = require('./env/env.development')
 const ProductionConfig = require('./env/env.production')
-
+const path = require('path')
+const log = require('electron-log')
 const getConfig = (appEnv) => {
   const { argv } = process
   let defaultConfig = new DefaultConfig().getOptions()
   let developmentConfig = {}, productionConfig = {}
   let dev = is.dev()
   let [exe = '', type = '', envType = ''] = argv
+
+  // let exc = ['.CodeEngine', '.codeengine', '.CODEENGINE']
+  // || exc.includes(path.extname(exe))
+
   if (!dev) {
     /* 小程序开发模式 */
     if (type === '.' || appEnv === 'development') {

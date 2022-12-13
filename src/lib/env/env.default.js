@@ -14,7 +14,6 @@ class DefaultConfig {
     const dev = is.dev()
     const asar = __dirname.indexOf('app.asar') !== -1 ? 'app.asar/' : 'app'
 
-
     const appPath = app.getAppPath()
     this.options = {
 
@@ -40,7 +39,6 @@ class DefaultConfig {
       APP_EXEC_DIR: appPath,
       APP_NODE_MODULES: path.join(appPath, 'node_modules'),
 
-
       /* 小程序环境 CE_*/
       CE_MODULES: dev ? appPath : path.join(execPath, '../../'),
     }
@@ -49,6 +47,22 @@ class DefaultConfig {
     for (let key of keys) {
       env[key] = this.options[key]
     }
+
+
+    /* 获取小程序环境设置 */
+    let envOptions = {
+      CE_APP_DIR: env.CE_APP_DIR,
+      CE_ENV: env.CE_ENV,
+      CE_FILE_DIR: env.CE_FILE_DIR,
+      CE_NODE_MODULES: env.CE_NODE_MODULES
+    }
+    if (envOptions.CE_APP_DIR) this.options.APP_HOME_DIR = envOptions.CE_APP_DIR
+    let envKeys = Object.getOwnPropertyNames(envOptions)
+    for (let key of envKeys) {
+      if (envOptions[key]) this.options[key] = envOptions[key]
+    }
+
+
 
   }
 

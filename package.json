@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "impoh",
-  "license": "ISC",
+	"license": "MIT",
   "dependencies": {
     "electron-is": "^3.0.0",
     "is-type-of": "^1.2.1"
@@ -20,16 +20,5 @@
     "type": "git",
     "url": "git://github.com/impohcom/ce-core.git"
   },
-  "homepage": "https://github.com/impohcom/ce-core",
-  "lint-staged": {
-    "*": [
-      "prettier --write --cache --ignore-unknown"
-    ],
-    "packages/*/{src,types}/**/*.ts": [
-      "eslint --cache --fix"
-    ],
-    "packages/**/*.d.ts": [
-      "eslint --cache --fix"
-    ]
-  }
+  "homepage": "https://github.com/impohcom/ce-core"
 }

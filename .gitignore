@@ -8,16 +8,9 @@ node_modules
 */build/admin-linux-x64
 */build/admin-win32-x64
 */public/apidoc
-all
-dist
-apply
-*/release
-*/redcapBuild
-*/resource/dist
-*/app.zip
 
-**/release
-**/packages
+dist
+
 
 
 # Created by .ignore support plugin (hsz.mobi)

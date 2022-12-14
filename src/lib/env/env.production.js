@@ -8,7 +8,7 @@ class ProductionConfig {
   options = {}
   constructor () {
     let { execPath, env, argv, cwd } = process
-
+    log.verbose(env)
     this.options = {
       CE_ENV: 'production'
     }

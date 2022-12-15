@@ -11,8 +11,10 @@ class DevelopmentConfig {
       APP_HOME_DIR: env.CE_APP_DIR,
       APP_RESOURCES_DIR: env.CE_APP_DIR
     }
-    env.APP_HOME_DIR = env.CE_APP_DIR
-    env.APP_RESOURCES_DIR = env.CE_APP_DIR
+    let keys = Object.getOwnPropertyNames(this.options)
+    for (let key of keys) {
+      env[key] = this.options[key]
+    }
   }
 
   /* 获取配置 */

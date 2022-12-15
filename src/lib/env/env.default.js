@@ -11,7 +11,6 @@ class DefaultConfig {
   options = {}
   constructor (self) {
     let { execPath, env, argv, cwd } = process
-    log.verbose(env)
     const dev = is.dev()
     const asar = __dirname.indexOf('app.asar') !== -1 ? 'app.asar/' : 'app'
 

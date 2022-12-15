@@ -10,6 +10,7 @@ class ProductionConfig {
     let { execPath, env, argv, cwd } = process
     this.options = {
       NODE_ENV: 'production',
+
       CE_ENV: 'production'
     }
     if (env.CE_APP_DIR) this.options.APP_HOME_DIR = env.CE_APP_DIR

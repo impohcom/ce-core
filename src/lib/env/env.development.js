@@ -7,6 +7,7 @@ class DevelopmentConfig {
   constructor () {
     let { execPath, env, argv, cwd } = process
     this.options = {
+      NODE_ENV: 'development',
       CE_ENV: 'development',
       APP_HOME_DIR: env.CE_APP_DIR,
       APP_RESOURCES_DIR: env.CE_APP_DIR

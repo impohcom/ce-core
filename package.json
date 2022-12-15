@@ -1,6 +1,6 @@
 {
   "name": "ce-core",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "ce core",
   "main": "index.js",
   "scripts": {

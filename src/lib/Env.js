@@ -29,14 +29,15 @@ const getConfig = (appEnv) => {
 
 
   // 环境配置
+  let newConfig = {}
   for (let i = 0; i < process.argv.length; i++) {
     const tmpArgv = process.argv[i]
     if (tmpArgv.indexOf('--env=') !== -1 && (dev || type === '.')) {
-      defaultConfig.APP_ENV = tmpArgv.substring(6)
+      newConfig.APP_ENV = tmpArgv.substring(6)
     }
   }
 
-  return { ...defaultConfig, ...developmentConfig, ...productionConfig }
+  return { ...defaultConfig, ...developmentConfig, ...productionConfig, ...newConfig }
 }
 
 module.exports = getConfig

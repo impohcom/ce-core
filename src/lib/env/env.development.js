@@ -13,7 +13,8 @@ class DevelopmentConfig {
 
       APP_ENV: 'dev',
       APP_HOME_DIR: env.CE_APP_DIR,
-      APP_RESOURCES_DIR: env.CE_APP_DIR
+      APP_RESOURCES_DIR: env.CE_APP_DIR,
+      APP_FILE_DIR: env.CE_FILE_DIR
     }
     let keys = Object.getOwnPropertyNames(this.options)
     for (let key of keys) {

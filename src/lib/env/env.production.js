@@ -13,7 +13,8 @@ class ProductionConfig {
 
       CE_ENV: 'production',
 
-      APP_ENV: 'prod'
+      APP_ENV: 'prod',
+      APP_FILE_DIR: env.CE_FILE_DIR
     }
     if (env.CE_APP_DIR) this.options.APP_HOME_DIR = env.CE_APP_DIR
 

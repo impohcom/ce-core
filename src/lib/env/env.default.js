@@ -44,10 +44,6 @@ class DefaultConfig {
       CE_MODULES: dev ? appPath : path.join(execPath, '../../'),
     }
 
-    let keys = Object.getOwnPropertyNames(this.options)
-    for (let key of keys) {
-      env[key] = this.options[key]
-    }
 
 
     /* 获取小程序环境设置 */
@@ -62,6 +58,13 @@ class DefaultConfig {
     let envKeys = Object.getOwnPropertyNames(envOptions)
     for (let key of envKeys) {
       if (envOptions[key]) this.options[key] = envOptions[key]
+    }
+
+
+    // 添加 ENV 全局变量
+    let keys = Object.getOwnPropertyNames(this.options)
+    for (let key of keys) {
+      env[key] = this.options[key]
     }
 
 

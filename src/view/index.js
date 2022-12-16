@@ -2,16 +2,21 @@
  * 视图插件
  */
 
-const { ipcRenderer: ipc } = (require && require('electron')) || window.electron || {}
+const { ipcRenderer: ipc, app } = (require && require('electron')) || window.electron || {}
 const Module = require('module').Module
-const old_findPath = Module._findPath
 const path = require('path')
-const { CE_APP_DIR, CE_FILE_DIR, CE_NODE_MODULES } = process.env
+const { CE_APP_DIR, CE_FILE_DIR, CE_NODE_MODULES, APP_NODE_MODULES } = process.env
+const old_findPath = Module._findPath
 
+
+// let APP_NODE_MODULES = path.join(app.getAppPath(), 'node_modules')
+
+log.verbose('CE_NODE_MODULES, APP_NODE_MODULES =>', CE_NODE_MODULES, APP_NODE_MODULES)
 
 // 改写小程序视图插件
 Module._findPath = function (request, paths, isMain) {
   if (CE_NODE_MODULES && !paths.includes(CE_NODE_MODULES)) paths.push(CE_NODE_MODULES)
+  if (APP_NODE_MODULES && !paths.includes(APP_NODE_MODULES)) paths.push(APP_NODE_MODULES)
   return old_findPath(request, paths, isMain)
 }
 

@@ -11,7 +11,7 @@ const old_findPath = Module._findPath
 
 // let APP_NODE_MODULES = path.join(app.getAppPath(), 'node_modules')
 
-log.verbose('CE_NODE_MODULES, APP_NODE_MODULES =>', CE_NODE_MODULES, APP_NODE_MODULES)
+// log.verbose('CE_NODE_MODULES, APP_NODE_MODULES =>', CE_NODE_MODULES, APP_NODE_MODULES)
 
 // 改写小程序视图插件
 Module._findPath = function (request, paths, isMain) {

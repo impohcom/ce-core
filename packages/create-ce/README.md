@@ -64,5 +64,5 @@ pnpm create ce my-vue-app --template vue
 
 ```
 
-查看 [create-vite](https://github.com/impohcom/ce-core/tree/main/packages/create-ce) 以获取每个模板的更多细节：`vanilla`，`vanilla-ts`, `vue`, `vue-ts`，`react`，`react-ts`，`react-swc`，`react-swc-ts`，`preact`，`preact-ts`，`svelte`，`svelte-ts`。
+查看 [create-vite](https://github.com/impohcom/ce-core/tree/main/packages/create-ce) 以获取每个模板的更多细节：`ce`,`vanilla`，`vanilla-ts`, `vue`, `vue-ts`，`react`，`react-ts`，`react-swc`，`react-swc-ts`，`preact`，`preact-ts`，`svelte`，`svelte-ts`。
 

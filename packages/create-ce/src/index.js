@@ -111,6 +111,18 @@ const FRAMEWORKS = [
       },
     ],
   },
+  {
+    name: 'ce',
+    display: 'Ce',
+    color: lightRed,
+    variants: [
+      {
+        name: 'ce',
+        display: 'JavaScript',
+        color: yellow,
+      },
+    ],
+  },
   // {
   //   name: 'lit',
   //   display: 'Lit',

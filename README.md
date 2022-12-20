@@ -6,6 +6,18 @@
 1.0.4 版本新增适配小程序跟electron应用程序小程序 跟 electron应用 可以共用一个 ce-core 依赖
 
 
+# code-engine 小程序启动实现原理
+
+code-engine 源码
+https://github.com/impohcom/code-engine  
+
+小程序打包器 源码
+https://github.com/impohcom/code-ce
+
+
+小程序开发 案例
+https://github.com/impohcom/code-applet
+
 
 
 #  模块更新记录
@@ -17,8 +29,8 @@
 # 生命周期
 1. beforeCreate（创建前）
 2. created （创建后）
-3. beforeMount (载入前)
-4. mounted （载入后）
+<!-- 3. beforeMount (载入前) -->
+<!-- 4. mounted （载入后） -->
 
 
 

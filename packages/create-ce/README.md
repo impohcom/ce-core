@@ -17,8 +17,8 @@
 # 生命周期
 1. beforeCreate（创建前）
 2. created （创建后）
-3. beforeMount (载入前)
-4. mounted （载入后）
+<!-- 3. beforeMount (载入前) -->
+<!-- 4. mounted （载入后） -->
 
 
 

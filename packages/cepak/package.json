@@ -1,6 +1,6 @@
 {
   "name": "cepkg",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "ce build exe",
   "main": "index.js",
   "author": "impoh",
@@ -35,5 +35,10 @@
   },
   "dependencies": {
     "cross-spawn": "^7.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/impohcom/cepkg.git"
+  },
+  "homepage": "https://github.com/impohcom/cepkg"
 }

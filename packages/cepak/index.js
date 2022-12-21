@@ -1,12 +1,11 @@
 /*
  * @Author: Chen
- * @Email: codeeetop@qq.com
+ * @Email: impoh@qq.com
  * @Date: 2021-12-13 09:10:54
  * @LastEditTime: 2022-03-07 15:01:48
  * @Description: ...每位新修改者自己的信息
  */
 
-console.log('即那是看到-=-----')
 
 
 const { Command } = require('commander')
@@ -39,26 +38,25 @@ program
 program
   .command('build').alias('bui')
   .action((cmd, options) => {
-    console.log(cmd)
-    // console.time('build')
-    // // 打包函数时关闭
-    // const fun = (row) => {
-    //   zipbuild(row)
-    //   process.exit()
-    // }
+    console.time('build')
+    // 打包函数时关闭
+    const fun = (row) => {
+      zipbuild(row)
+      process.exit()
+    }
 
-    // // const appCE = new Build({
-    // //   appDir: 'D:\\Hui\\Github\\applet\\ce-task-tag',
-    // // }, fun);
-
-    // // 生成环境
     // const appCE = new Build({
-    //   appDir: __cmd
-    // }, fun)
+    //   appDir: 'D:\\Hui\\Github\\applet\\ce-task-tag',
+    // }, fun);
 
-    // appCE.initPackage()
+    // 生成环境
+    const appCE = new Build({
+      appDir: __cmd
+    }, fun)
 
-    // console.timeEnd('build')
+    appCE.initPackage()
+
+    console.timeEnd('build')
   })
 
 

@@ -1,6 +1,6 @@
 {
   "name": "cepkg",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ce build exe",
   "main": "index.js",
   "author": "impoh",
@@ -38,7 +38,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/impohcom/cepkg.git"
+    "url": "git+https://github.com/impohcom/ce-core.git",
+    "directory": "packages/cepak"
   },
-  "homepage": "https://github.com/impohcom/cepkg"
+  "homepage": "https://github.com/impohcom/ce-core/tree/main/packages/cepak"
 }

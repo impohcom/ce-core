@@ -12,11 +12,15 @@ code-engine 源码
 https://github.com/impohcom/code-engine  
 
 小程序打包器 源码
-https://github.com/impohcom/code-ce
-
+https://github.com/impohcom/ce-core/tree/main/packages/cepak
 
 小程序开发 案例
 https://github.com/impohcom/code-applet
+
+# 小程序启动实现案例
+[code-engine](https://github.com/impohcom/code-engine)
+code-engine 是利用electron框架，通过 process.argv 获取appid，来切换不同的小程序。
+https://github.com/impohcom/code-engine
 
 
 
